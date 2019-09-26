@@ -75,6 +75,6 @@ class Student
     WHERE grade = 10
     LIMIT ?
    SQL
-   DB[:conn].execute(sql, num)
+   DB[:conn].execute(sql)
   end 
 end
