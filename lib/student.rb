@@ -68,4 +68,13 @@ class Student
    SQL
    DB[:conn].execute(sql)
   end 
+  
+  def self.frist_x_students_in_grade_10(num)
+    sql = <<-SQL
+    SELECT * FROM students
+    WHERE grade = 10
+    LIMIT ?
+   SQL
+   DB[:conn].execute(sql)
+  end 
 end
